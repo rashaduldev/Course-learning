@@ -1,6 +1,6 @@
 
 
-const componentName = () => {
+const HomePage = () => {
     return (
         <div>
         HomePage
@@ -8,4 +8,4 @@ const componentName = () => {
     );
 };
 
-export default componentName;
+export default HomePage;

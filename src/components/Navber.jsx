@@ -1,6 +1,6 @@
 
 
-const componentName = () => {
+const Navber = () => {
     return (
         
         <div>
@@ -60,4 +60,4 @@ const componentName = () => {
     );
 };
 
-export default componentName;
+export default Navber;
