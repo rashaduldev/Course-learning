@@ -1,9 +1,10 @@
+import Course from "../Course/Course";
 
 
 const HomePage = () => {
     return (
         <div>
-        HomePage
+            <Course/>
         </div>
     );
 };

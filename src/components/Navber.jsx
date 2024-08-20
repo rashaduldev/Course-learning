@@ -1,11 +1,11 @@
-
+import { HiOutlinePlusSmall } from "react-icons/hi2";
 
 const Navber = () => {
     return (
         
-        <div>
-          <div className="navbar bg-base-100">
-            <div className="navbar-start">
+        <div className="mt-3">
+          <div className="flex justify-around bg-base-100">
+            <div className="flex items-center">
                 <div className="dropdown">
                 <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
                     <svg
@@ -24,7 +24,6 @@ const Navber = () => {
                 <ul
                     tabIndex={0}
                     className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
-                    <li><a>Item 1</a></li>
                     <li>
                     <a>Parent</a>
                     <ul className="p-2">
@@ -32,28 +31,28 @@ const Navber = () => {
                         <li><a>Submenu 2</a></li>
                     </ul>
                     </li>
-                    <li><a>Item 3</a></li>
+                    <li><a>Support</a></li>
+                    <li><a>Login</a></li>
                 </ul>
                 </div>
-                <a className="btn btn-ghost text-xl">daisyUI</a>
+                <a className="text-xl font-bold">Cource</a>
             </div>
-            <div className="navbar-center hidden lg:flex">
-                <ul className="menu menu-horizontal px-1">
-                <li><a>Item 1</a></li>
+            <div className="hidden lg:flex gap-5">
+                <ul className="menu menu-horizontal px-1 flex gap-5">
                 <li>
                     <details>
-                    <summary>Parent</summary>
+                    <summary>Products</summary>
                     <ul className="p-2">
-                        <li><a>Submenu 1</a></li>
-                        <li><a>Submenu 2</a></li>
+                        <li><a>product 1</a></li>
+                        <li><a>product 2</a></li>
                     </ul>
                     </details>
                 </li>
-                <li><a>Item 3</a></li>
+                <li><a>Support</a></li>
+                <li><a>Login</a></li>
                 </ul>
-            </div>
-            <div className="navbar-end">
-                <a className="btn">Button</a>
+
+                <button className="px-4 py-1 btn bg-[#B6CD26]"> <p className="font-bold text-black"><HiOutlinePlusSmall /></p>Join Now</button>
             </div>
             </div>
         </div>
