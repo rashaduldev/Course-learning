@@ -1,4 +1,4 @@
-import React from 'react';
+
 
 const HeroSection = () => {
     return (
@@ -26,18 +26,16 @@ const HeroSection = () => {
                 <div className="mt-10 flex justify-center">
                     <iframe
                         width="560"
-                        height="315"
+                        height="450"
                         src="https://www.youtube.com/embed/dCr6bBq9S4Y?si=NXE_hBsDLODvKCzL"
                         title="YouTube video player"
                         frameBorder="0"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                         referrerPolicy="strict-origin-when-cross-origin"
                         allowFullScreen
-                        className="w-full max-w-3xl mx-auto shadow-lg"
+                        className="w-full max-w-4xl mx-auto shadow-lg rounded-lg"
                     ></iframe>
                 </div>
-
-                <p className="text-gray-500 mt-3">IMAGE NOT INCLUDED</p>
             </div>
         </div>
     );

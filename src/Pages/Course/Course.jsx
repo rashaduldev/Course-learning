@@ -150,7 +150,7 @@ import { useState } from 'react';
       };
   
       return (
-          <div className="my-5">
+          <div className="my-5 mx-36 lg:mt-32">
               <h1 className="text-center text-5xl font-bold py-3">One payment get all courses</h1>
               <p className="text-center py-3 text-gray-500">
                   Unlock unlimited access to our entire library with a single payment. Plus, enjoy complimentary <br /> access to all forthcoming courses at <a className="text-[#B6CD26] font-bold">no extra cost!</a>
@@ -166,11 +166,7 @@ import { useState } from 'react';
                               </figure>
                               <div className="card-body">
                                   <h2 className="card-title">{course.title}</h2>
-                                  <p>{course.description}</p>
                                   <p className="font-bold">Mentor: {course.mentor}</p>
-                                  <div className="card-actions justify-end">
-                                      <button className="btn btn-primary">Enroll Now</button>
-                                  </div>
                               </div>
                           </div>
                       ))
@@ -182,9 +178,9 @@ import { useState } from 'react';
                   <div className="text-center mt-5">
                       <button 
                           onClick={showAllCourses} 
-                          className="btn btn-secondary"
+                          className="btn bg-[#C8E031] hover:bg-[#c9e031d5]"
                       >
-                          Show All Courses
+                          See All Courses
                       </button>
                   </div>
               )}
