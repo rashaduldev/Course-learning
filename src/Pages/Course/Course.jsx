@@ -150,7 +150,7 @@ import { useState } from 'react';
       };
   
       return (
-          <div className="my-5 mx-36 lg:mt-32">
+          <div className="my-5 lg:mx-48 mx-3 lg:mt-32">
               <h1 className="text-center text-5xl font-bold py-3">One payment get all courses</h1>
               <p className="text-center py-3 text-gray-500">
                   Unlock unlimited access to our entire library with a single payment. Plus, enjoy complimentary <br /> access to all forthcoming courses at <a className="text-[#B6CD26] font-bold">no extra cost!</a>
