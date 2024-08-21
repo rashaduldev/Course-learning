@@ -1,0 +1,27 @@
+body {
+    background: linear-gradient(to right, #f2f7e7, #eef9f7);
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+
+.join-button {
+    background-color: #a3cc00;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.join-button:hover {
+    background-color: #8ab800;
+}
