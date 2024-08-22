@@ -111,82 +111,51 @@ const courseData=[
       "mentor": "Kevin Young",
       "description": "Learn the basics of video marketing, from planning and production to promotion and analysis."
     },
-    {
-      "id": 17,
-      "img": "https://i.ibb.co/j6JkYB7/Leonardo-Phoenix-A-modern-sleek-and-professional-illustration-3.jpg",
-      "title": "SEO Writing Techniques",
-      "mentor": "Donna King",
-      "description": "Improve your writing skills with SEO best practices to create content that ranks higher in search results."
-    },
-    {
-      "id": 18,
-      "img": "https://i.ibb.co/KKvwf13/Leonardo-Phoenix-A-modern-sleek-and-professional-illustration-0.jpg",
-      "title": "Conversion Rate Optimization",
-      "mentor": "Brian Wright",
-      "description": "Learn how to optimize your website and landing pages to increase conversion rates and drive more sales."
-    },
-    {
-      "id": 19,
-      "img": "https://i.ibb.co/xSH502p/Leonardo-Phoenix-A-modern-sleek-and-professional-illustration-1.jpg",
-      "title": "Local SEO Strategies",
-      "mentor": "Kimberly Lopez",
-      "description": "Master local SEO techniques to improve your business's visibility in local search results."
-    },
-    {
-      "id": 20,
-      "img": "https://i.ibb.co/j6JkYB7/Leonardo-Phoenix-A-modern-sleek-and-professional-illustration-3.jpg",
-      "title": "Influencer Marketing Essentials",
-      "mentor": "George Hill",
-      "description": "Learn how to collaborate with influencers to promote your brand and reach a wider audience."
-    }
   ]
-import { useState } from 'react';
-
-  const Course = () => {
-      const [visibleCourses, setVisibleCourses] = useState(8); // Initially show 8 courses
+  const Carousel = () => {
+    const chunkedData = [];
+    for (let i = 0; i < courseData.length; i += 4) {
+      chunkedData.push(courseData.slice(i, i + 4));
+    }
   
-      const showAllCourses = () => {
-          setVisibleCourses(courseData.length); // Show all courses when button is clicked
-      };
-  
-      return (
-          <div className="my-5 lg:mx-48 mx-3 lg:mt-32">
-              <h1 className="text-center text-5xl font-bold py-3">One payment get all courses</h1>
-              <p className="text-center py-3 text-gray-500">
-                  Unlock unlimited access to our entire library with a single payment. Plus, enjoy complimentary <br /> access to all forthcoming courses at <a className="text-[#B6CD26] font-bold">no extra cost!</a>
-              </p>
-  
-              {/* Cards Container */}
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-                  {
-                      courseData.slice(0, visibleCourses).map((course) => (
-                          <div key={course.id} className="card card-compact bg-base-100 shadow-xl my-10">
-                              <figure>
-                                  <img src={course.img} alt={course.title} className="h-48 w-full object-cover" />
-                              </figure>
-                              <div className="card-body">
-                                  <h2 className="card-title">{course.title}</h2>
-                                  <p className="font-bold">Mentor: {course.mentor}</p>
-                              </div>
-                          </div>
-                      ))
-                  }
-              </div>
-  
-              {/* Show All Button */}
-              {visibleCourses < courseData.length && (
-                  <div className="text-center mt-5">
-                      <button 
-                          onClick={showAllCourses} 
-                          className="btn bg-[#C8E031] hover:bg-[#c9e031d5]"
-                      >
-                          See All Courses
-                      </button>
-                  </div>
-              )}
-          </div>
-      );
+    return (
+      <div className=" bg-[#EBF8EF] py-10 lg:px-48">
+        <h1 className="text-center text-2xl lg:text-5xl font-bold mb-20">Podcast & Free Courses</h1>
+        <div className="carousel w-full">
+          {chunkedData.map((chunk, index) => (
+            <div
+              key={index}
+              id={`item${index + 1}`}
+              className="carousel-item w-full flex justify-around gap-5"
+            >
+              {chunk.map((course) => (
+                <div key={course.id} className="card w-1/4">
+                  <img src={course.img} alt={course.title} className="w-full rounded-lg" />
+                 <div className="p-3">
+                    <h3 className="font-bold text-sm lg:text-xl">{course.title}</h3>
+                    <p className="text-gray-600"><a className="font-bold">Mentor </a>{course.mentor}</p>
+                 </div>
+                </div>
+              ))}
+            </div>
+          ))}
+        </div>
+        <div className="flex w-full justify-center gap-2 py-2">
+          {chunkedData.map((_, index) => (
+            <a
+              key={index}
+              href={`#item${index + 1}`}
+              className="btn btn-xs"
+            >
+              {index + 1}
+            </a>
+          ))}
+        </div>
+            <div className="text-center my-3">
+                <button className="py-2 px-5 border border-gray-400 rounded font-bold text-sm">Watch more</button>
+            </div>
+      </div>
+    );
   };
   
-  export default Course;
-  
+  export default Carousel;

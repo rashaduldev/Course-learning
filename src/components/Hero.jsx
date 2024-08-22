@@ -1,3 +1,4 @@
+import { HiOutlinePlusSmall } from "react-icons/hi2";
 
 
 const HeroSection = () => {
@@ -14,12 +15,14 @@ const HeroSection = () => {
 
                 {/* Email Input and Join Now Button */}
                 <div className="mt-6 flex justify-center">
-                    <input 
-                        type="email" 
-                        placeholder="Email Address" 
-                        className="input input-bordered w-full max-w-xs"
-                    />
-                    <button className="btn btn-success ml-2">Join Now</button>
+                <div className="flex items-center relative">
+                    <input type="text" className="w-96 h-14 p-3 rounded-lg border-[1px] border-gray-400" placeholder="Email address" />
+                    {/* <button className="p-[6px] rounded-lg bg-black text-white absolute right-[1px] px-5">Sibscribe</button> */}
+                    <button className="px-4 py-1 btn bg-[#B6CD26] flex items-center gap-2 absolute right-[5px]">
+                        <HiOutlinePlusSmall className="text-black" />
+                        <p className="font-bold text-black">Join Now</p>
+                    </button>
+                </div>
                 </div>
 
                 {/* YouTube Embed */}
