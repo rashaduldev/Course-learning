@@ -2,8 +2,10 @@ import { HiOutlinePlusSmall } from "react-icons/hi2";
 
 const Navbar = () => {
   return (
-    <div className="py-3 shadow-5xl bg-[#FFFFFF]">
-      <div className="flex justify-between items-center px-4 lg:px-36 bg-base-100">
+    <div 
+    style={{ boxShadow: "0px 1px 36px 0px rgba(0, 0, 0, 0.10)" }}
+    className="py-3 shadow-5xl bg-[#FFFFFF] shadow-2xl fixed w-full">
+      <div className="flex justify-between items-center px-4 lg:px-[200px] bg-base-100">
         {/* Mobile Menu Button */}
         <div className="lg:hidden">
           <div className="dropdown">
@@ -43,7 +45,10 @@ const Navbar = () => {
         </div>
 
         {/* Logo */}
-        <a className="text-xl font-bold lg:order-none order-1">Cource</a>
+        <a className="text-xl font-bold w-[136px] h-[33px] lg:order-none order-1" href="/">
+          <img src="/src/assets/Logo.png" alt="logo" />
+        </a>
+        {/* <a className="text-xl font-bold lg:order-none order-1">Cource</a> */}
 
         {/* Desktop Menu */}
         <div className="hidden lg:flex items-center gap-5">
