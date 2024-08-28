@@ -2,8 +2,80 @@
 @tailwind components;
 @tailwind utilities;
 
+*{
+    font-family: Public Sans;
+}
 
 .bg_img{
     background-image: url('/src/assets/Hero_BG.png');
-    
+}
+
+/* Base styles */
+.Primary_Text_Colour {
+    color: #212B36;
+}
+
+.Secondery_Text_Colour {
+    color: #637381;
+}
+
+.button_colour {
+    background-color: #C8E031;
+    color: #212B36;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.button_colour:hover {
+    background-color: #B0CB28; /* Slightly darker shade for hover */
+    color: #212B36;
+}
+
+.description {
+    color: #637381;
+    font-size: 14px;
+}
+
+.header_text {
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 64px;
+    color: #212B36;
+}
+
+/* Responsive styles */
+
+/* For tablets (portrait orientation) and up */
+@media (max-width: 768px) {
+    .header_text {
+        font-size: 36px;
+        line-height: 48px;
+    }
+
+    .description {
+        font-size: 13px;
+    }
+
+    .button_colour {
+        padding: 8px 16px;
+    }
+}
+
+/* For mobile phones */
+@media (max-width: 480px) {
+    .header_text {
+        font-size: 28px;
+        line-height: 38px;
+    }
+
+    .description {
+        font-size: 12px;
+    }
+
+    .button_colour {
+        padding: 6px 12px;
+    }
 }

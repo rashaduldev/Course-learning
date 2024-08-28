@@ -29,10 +29,15 @@ const Course = () => {
         navigate('/all-courses'); // Navigate to the AllCourses page
     };
 
+      // Function to handle card click
+      const handleCardClick = (courseId) => {
+        navigate(`/course/${courseId}`); // Navigate to the course detail page
+    };
+
     return (
         <div className="my-5 lg:mx-48 mx-3 lg:mt-32">
-            <h1 className="text-center text-5xl font-bold py-3">One payment get all courses</h1>
-            <p className="text-center py-3 text-gray-500">
+            <h1 className="text-center text-5xl leading-[64px] font-[800] py-3">One payment get all courses</h1>
+            <p className="text-center py-3 Secondery_Text_Colour text-[16px] font-[400]">
                 Unlock unlimited access to our entire library with a single payment. Plus, enjoy complimentary <br /> access to all forthcoming courses at <a className="text-[#B6CD26] font-bold">no extra cost!</a>
             </p>
   
@@ -40,7 +45,9 @@ const Course = () => {
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
                 {
                     courses.slice(0, visibleCourses).map((course) => (
-                        <div key={course.id} className="card card-compact bg-base-100 shadow-xl my-10">
+                        <div key={course.id}
+                        onClick={() => handleCardClick(course.id)}
+                        className="card card-compact bg-base-100 shadow my-10 cursor-pointer">
                             <figure>
                                 <img src={course.img} alt={course.title} className="h-48 w-full object-cover" />
                             </figure>

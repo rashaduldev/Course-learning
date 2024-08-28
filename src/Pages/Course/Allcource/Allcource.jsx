@@ -37,8 +37,8 @@ const AllCourses = () => {
             >
                 {/* Optional gradient overlay */}
                 <div className="lg:px-[200px]">
-                    <h1 className="text-center lg:text-left text-5xl font-bold py-3">Explore Our Courses</h1>
-                    <p className="lg:text-left text-center pt-3 pb-10 text-gray-500">
+                    <h1 className="text-center lg:text-left py-3 header_text">Explore Our Courses</h1>
+                    <p className="lg:text-left text-center pt-3 pb-10 Secondery_Text_Colour">
                         Unlock unlimited access to our entire library with a single payment. Plus, enjoy complimentary access to all <br /> forthcoming courses at <span className='text-[#B6CD26]'>no extra cost!</span>
                     </p>
                 </div>
@@ -52,7 +52,7 @@ const AllCourses = () => {
                         {courses.map((course) => (
                             <div 
                                 key={course.id} 
-                                onClick={() => handleCardClick(course.id)} // Use course ID to navigate
+                                onClick={() => handleCardClick(course.id)}
                                 style={{ boxShadow: "0px 1px 36px 0px rgba(0, 0, 0, 0.10)" }}
                                 className="bg-white rounded-[8px] cursor-pointer"
                             >
@@ -68,7 +68,7 @@ const AllCourses = () => {
                     </div>
                     
                     {/* Pagination */}
-                    <div className='text-right my-5'>
+                    <div className='text-right my-5 lg:mx-[200px]'>
                         <div className="flex justify-end items-center">
                             <button className="h-8 w-8 hover:bg-gray-400 rounded-full">«</button>
                             <button className="h-8 w-8 hover:bg-gray-400 rounded-full">1</button>

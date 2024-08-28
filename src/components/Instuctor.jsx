@@ -4,8 +4,8 @@ const Instuctor = () => {
            <div className=" bg-[#C8FACD] rounded-lg">
                 <div className="flex flex-col md:flex-col lg:flex-row justify-center p-20 gap-20">
                         <div className="flex flex-col lg:py-10 lg:px-10">
-                            <p className="text-3xl lg:text-7xl font-bold lg:leading-[70px] lg:text-left text-center">Our <br /> Instructor</p>
-                            <p className="lg:py-6 pt-5 lg:pt-10">
+                            <p className="lg:text-left text-center header_text">Our <br /> Instructor</p>
+                            <p className="lg:py-6 pt-5 lg:pt-10 text-[16px] leading-[24px]">
                             Our expert instructors bring real-world  experience to diverse subjects, offering practical  insights for all skill levels. Embark on your learning journey today and unlock your full potential with our dynamic online courses.
                                 </p>
                         </div>

@@ -34,7 +34,7 @@ const Faq = () => {
     return (
         <div className="flex flex-col lg:flex-row justify-center lg:my-36 my-8 lg:gap-72 gap-12 lg:mx-48 px-4 lg:px-0 py-6">
             <div className='text-center lg:text-left'>
-                <h1 className="text-3xl lg:text-6xl font-bold lg:leading-[70px]">
+                <h1 className="header_text">
                     Frequently Asked <br /> Questions
                 </h1>
                 <p className='mt-6 text-xl'>

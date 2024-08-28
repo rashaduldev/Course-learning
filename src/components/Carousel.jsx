@@ -120,7 +120,7 @@ const courseData=[
   
     return (
       <div className=" bg-[#EBF8EF] py-10 lg:px-48">
-        <h1 className="text-center text-2xl lg:text-5xl font-bold mb-20">Podcast & Free Courses</h1>
+        <h1 className="text-center header_text mb-20">Podcast & Free Courses</h1>
         <div className="carousel w-full">
           {chunkedData.map((chunk, index) => (
             <div
