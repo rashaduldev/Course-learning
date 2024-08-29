@@ -149,7 +149,8 @@ const Courcedetails = () => {
     return (
         <div >
             <div 
-            className=' pt-32 lg:mx-[200px] flex flex-col lg:flex-row gap-10'>
+           className="py-20 px-4 pt-32 bg-cover bg-center lg:mx-[200px] flex flex-col lg:flex-row gap-10"
+           style={{ backgroundImage: `url('https://i.ibb.co/gtvDkk7/Hero-BG.png')` }}>
                 <div className='lg:w-[70%]'>
                          {/* Title and Description Section */}
                         <div className="flex flex-col lg:flex-row justify-between items-start">
@@ -183,12 +184,7 @@ const Courcedetails = () => {
 
                          {/* Image and Course Info Section */}
                          <div className="flex flex-col lg:flex-row mt-6">
-                            <div className="lg:w-full pr-6">
-                                {/* <img
-                                    src="https://via.placeholder.com/600x300"
-                                    alt="Course"
-                                    className="rounded-lg w-full h-auto"
-                                /> */}
+                            <div className="lg:w-full lg:pr-6">
                              <iframe className='w-full h-[492px]' width="0" height="0" src="https://www.youtube.com/embed/MkcfB7S4fq0?si=_W6yMmRzvGVc3WPx" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowfullscreen />
                             </div>
                         </div>
@@ -196,7 +192,7 @@ const Courcedetails = () => {
                         {/*  tab part  */}
                         <div className=" mx-auto p-4">
                             {/* Tabs Section */}
-                            <div className="flex justify-around border-b mb-4">
+                            <div className="flex flex-col md:flex-row justify-around border-b mb-4">
                                 <button className="px-4 py-2 text-gray-600 border-b-2 border-transparent hover:text-blue-600 hover:border-blue-600 focus:text-blue-600 focus:border-blue-600">Overview</button>
                                 <button className="px-4 py-2 text-gray-600 border-b-2 border-transparent hover:text-blue-600 hover:border-blue-600 focus:text-blue-600 focus:border-blue-600">Curriculum</button>
                                 <button className="px-4 py-2 text-gray-600 border-b-2 border-transparent hover:text-blue-600 hover:border-blue-600 focus:text-blue-600 focus:border-blue-600">Instructor</button>
@@ -246,9 +242,9 @@ const Courcedetails = () => {
                             </div>
 
                             {/* Curriculum Section */}
-                            <div className='flex items-center justify-between mb-5 mt-10'>
+                            <div className='flex flex-col md:flex-row items-center justify-between mb-5 mt-10'>
                                 <h1 className='text-[24px] font-[700] leading-[36px] Primary_Text_Colour'>Curriculum</h1>
-                                <div className='flex items-center gap-5'>
+                                <div className='flex items-center gap-5 my-4 lg:my-0'>
                                     <p className='flex items-center gap-2'>
                                         <span><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
                                         <path d="M2.5 16.25V5C2.5 4.83424 2.56585 4.67527 2.68306 4.55806C2.80027 4.44085 2.95924 4.375 3.125 4.375H7.29167C7.4269 4.375 7.55848 4.41886 7.66667 4.5L9.83333 6.125C9.94152 6.20614 10.0731 6.25 10.2083 6.25H15.625C15.7908 6.25 15.9497 6.31585 16.0669 6.43306C16.1842 6.55027 16.25 6.70924 16.25 6.875V8.75" stroke="#FF6636" strokeWidth="1.3" strokeLinecap="round" strokeLinejoin="round"/>
@@ -331,16 +327,16 @@ const Courcedetails = () => {
                         <div
                          style={{ border: '1px solid var(--Gray-100, #E9EAF0)' }}
                         className="bg-white p-6 px-8  rounded-md">
-                            <div className="flex flex-col lg:flex-row items-center space-x-6">
+                            <div className="flex flex-col lg:flex-row items-center md:items-start lg:items-center space-x-6">
                             <img
                                 src="https://i.ibb.co/wsRj1WR/course-instector.jpg"
                                 alt="Instructor"
-                                className="w-24 h-24 rounded-full"
+                                className="w-24 h-24 rounded-full md:ml-6 md:mb-3"
                             />
                             <div>
                                 <h3 className="text-xl mb-[6px] Primary_Text_Colour font-semibold text-center md:text-left mt-5 md:mt-0">Vako Shvili</h3>
                                 <p className="Secondery_Text_Colour text-center md:text-left">Web Designer & Best-Selling Instructor</p>
-                                <div className="flex items-center space-x-6 my-4 text-sm text-gray-500">
+                                <div className="flex flex-col md:flex-row lg:flex-row lg:items-center space-x-6 my-4 text-sm text-gray-500">
                                 <span className='flex items-center gap-2'>
                                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
                                 <path d="M10.3446 14.901L14.2849 17.3974C14.7886 17.7165 15.4139 17.2419 15.2644 16.654L14.126 12.1756C14.0939 12.0509 14.0977 11.9197 14.137 11.797C14.1762 11.6743 14.2492 11.5652 14.3477 11.4822L17.8811 8.54132C18.3453 8.1549 18.1057 7.38439 17.5092 7.34568L12.8949 7.0462C12.7706 7.03732 12.6514 6.99332 12.5511 6.91931C12.4509 6.84531 12.3737 6.74435 12.3286 6.62819L10.6076 2.29436C10.5609 2.17106 10.4777 2.06492 10.3692 1.99002C10.2606 1.91511 10.1319 1.875 10 1.875C9.86813 1.875 9.73938 1.91511 9.63085 1.99002C9.52232 2.06492 9.43914 2.17106 9.39236 2.29436L7.6714 6.62819C7.62631 6.74435 7.54914 6.84531 7.4489 6.91931C7.34865 6.99332 7.22944 7.03732 7.10515 7.0462L2.49078 7.34568C1.89429 7.38439 1.65466 8.1549 2.11894 8.54132L5.65232 11.4822C5.75079 11.5652 5.82383 11.6743 5.86305 11.797C5.90226 11.9197 5.90606 12.0509 5.874 12.1756L4.81824 16.3288C4.63889 17.0343 5.38929 17.6038 5.99369 17.2209L9.65539 14.901C9.75837 14.8354 9.87792 14.8006 10 14.8006C10.1221 14.8006 10.2416 14.8354 10.3446 14.901V14.901Z" fill="#FD8E1F"/>
