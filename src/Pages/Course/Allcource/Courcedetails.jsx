@@ -147,10 +147,10 @@ const Courcedetails = () => {
     }
 
     return (
-        <div>
-            <div className=' pt-32 lg:mx-[200px] flex flex-col lg:flex-row gap-10'>
+        <div >
+            <div 
+            className=' pt-32 lg:mx-[200px] flex flex-col lg:flex-row gap-10'>
                 <div className='lg:w-[70%]'>
-
                          {/* Title and Description Section */}
                         <div className="flex flex-col lg:flex-row justify-between items-start">
                                 <div className="lg:flex-1 w-full">
@@ -515,134 +515,3 @@ const Courcedetails = () => {
 };
 
 export default Courcedetails;
-// Course Rating Section
-// <div className="bg-white p-6 shadow rounded-md">
-//     <h2 className="text-2xl font-semibold mb-4">Course Rating</h2>
-//     <div className="flex items-center space-x-6">
-//     <div className="text-center">
-//         <span className="text-4xl font-bold">4.8</span>
-//         <p className="text-yellow-500">🌟🌟🌟🌟🌟</p>
-//         <p className="text-gray-500">Course Rating</p>
-//     </div>
-//     <div className="flex-1">
-//         <div className="flex gap-3 items-center">
-//             <div>
-//             <div className="rating">
-//             <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400" />
-//             <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400" />
-//             <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400" />
-//             <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400" />
-//             <input
-//                 type="radio"
-//                 name="rating-2"
-//                 className="mask mask-star-2 bg-orange-400"
-//                 defaultChecked />
-//             </div>
-//             </div>
-//         <div className="w-1/5 text-gray-500">5 Star Rating</div>
-//         <div className="w-4/5">
-//             <div className="bg-gray-300 h-2 rounded-md overflow-hidden">
-//             <div className="bg-yellow-500 h-2" style={{ width: '75%' }}></div>
-//             </div>
-//         </div>
-//         <span className="ml-2 text-gray-500">75%</span>
-//         </div>
-//         <div className="flex items-center gap-3 mt-2">
-//         <div className="rating">
-//             <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400" />
-//             <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400" />
-//             <input
-//                 type="radio"
-//                 name="rating-2"
-//                 className="mask mask-star-2 bg-orange-400"
-//                 defaultChecked />
-//             <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400" />
-           
-//             <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400" />
-            
-//             </div>
-//         <div className="w-1/5 text-gray-500">4 Star Rating</div>
-//         <div className="w-4/5">
-//             <div className="bg-gray-300 h-2 rounded-md overflow-hidden">
-//             <div className="bg-yellow-500 h-2" style={{ width: '21%' }}></div>
-//             </div>
-//         </div>
-//         <span className="ml-2 text-gray-500">21%</span>
-//         </div>
-//         <div className="flex items-center gap-3 mt-2">
-//         <div className="rating">
-//             <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400" />
-//             <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400" />
-//             <input
-//                 type="radio"
-//                 name="rating-2"
-//                 className="mask mask-star-2 bg-orange-400"
-//                 defaultChecked />
-//             <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400" />
-           
-//             <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400" />
-            
-//             </div>
-//         <div className="w-1/5 text-gray-500">3 Star Rating</div>
-//         <div className="w-4/5">
-//             <div className="bg-gray-300 h-2 rounded-md overflow-hidden">
-//             <div className="bg-yellow-500 h-2" style={{ width: '3%' }}></div>
-//             </div>
-//         </div>
-//         <span className="ml-2 text-gray-500">3%</span>
-//         </div>
-//         <div className="flex items-center mt-2">
-//         <div className="w-1/5 text-gray-500">2 Star Rating</div>
-//         <div className="w-4/5">
-//             <div className="bg-gray-300 h-2 rounded-md overflow-hidden">
-//             <div className="bg-yellow-500 h-2" style={{ width: '1%' }}></div>
-//             </div>
-//         </div>
-//         <span className="ml-2 text-gray-500">1%</span>
-//         </div>
-//         <div className="flex items-center mt-2">
-//         <div className="w-1/5 text-gray-500">1 Star Rating</div>
-//         <div className="w-4/5">
-//             <div className="bg-gray-300 h-2 rounded-md overflow-hidden">
-//             <div className="bg-yellow-500 h-2" style={{ width: '0.5%' }}></div>
-//             </div>
-//         </div>
-//         <span className="ml-2 text-gray-500">&lt;1%</span>
-//         </div>
-//     </div>
-//     </div>
-// </div>
-
-// Students Feedback Section
-// <div className="bg-white p-6 shadow rounded-md">
-//     <h2 className="text-2xl font-semibold mb-4">Students Feedback</h2>
-//     <select className="border border-gray-300 rounded p-2 mb-4">
-//     <option>5 Star Rating</option>
-//     <option>4 Star Rating</option>
-//     <option>3 Star Rating</option>
-//     <option>2 Star Rating</option>
-//     <option>1 Star Rating</option>
-//     </select>
-//     <div className="space-y-6">
-//     {/* Single Feedback */}
-//     <div className="flex space-x-4">
-//         <img src="https://via.placeholder.com/50" alt="Student" className="w-12 h-12 rounded-full" />
-//         <div>
-//         <div className="flex items-center justify-between">
-//             <span className="font-semibold">Guy Hawkins</span>
-//             <span className="text-sm text-gray-500">1 week ago</span>
-//         </div>
-//         <div className="text-yellow-500">🌟🌟🌟🌟🌟</div>
-//         <p className="text-gray-700 mt-2">
-//             I appreciate the precise short videos (10 mins or less each) because overly long videos tend to make me lose focus...
-//         </p>
-//         </div>
-//     </div>
-//     {/* Repeat similar blocks for more feedbacks */}
-//     </div>
-// </div>
-
-// Load More Button
-// <div className="text-center">
-//     <button className="bg-red-500 text-white px-4 py-2 rounded mt-4 hover:bg-red-600">Load More 🔥</button>
-// </div>

@@ -46,7 +46,7 @@ const Navbar = () => {
 
         {/* Logo */}
         <a className="text-xl font-bold w-[136px] h-[33px] lg:order-none order-1" href="/">
-          <img src="/src/assets/Logo.png" alt="logo" />
+          <img src="https://i.ibb.co/w4Zrp1K/Logo.png" alt="logo" />
         </a>
         {/* <a className="text-xl font-bold lg:order-none order-1">Cource</a> */}
 
