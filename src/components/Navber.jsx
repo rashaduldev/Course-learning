@@ -1,10 +1,19 @@
+import { useState } from "react";
 import { HiOutlinePlusSmall } from "react-icons/hi2";
+import LoginModal from "../Pages/LoginModal/LoginModal";
 
 const Navbar = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const toggleModal = () => {
+    setIsModalOpen(!isModalOpen);
+  };
+
   return (
-    <div 
-    style={{ boxShadow: "0px 1px 36px 0px rgba(0, 0, 0, 0.10)" }}
-    className="py-3 shadow-5xl bg-[#FFFFFF] shadow-2xl fixed w-full z-50">
+    <div
+      style={{ boxShadow: "0px 1px 36px 0px rgba(0, 0, 0, 0.10)" }}
+      className="py-3 shadow-5xl bg-[#FFFFFF] shadow-2xl fixed w-full z-50"
+    >
       <div className="flex justify-between flex-row-reverse lg:flex-row items-center px-4 lg:px-[200px] bg-base-100 z-50">
         {/* Mobile Menu Button */}
         <div className="lg:hidden">
@@ -27,7 +36,7 @@ const Navbar = () => {
             </div>
             <ul
               tabIndex={0}
-              className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1]  w-52 p-2 shadow mt-[60px]"
+              className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] w-52 p-2 shadow mt-[60px]"
             >
               <li>
                 <details>
@@ -39,7 +48,7 @@ const Navbar = () => {
                 </details>
               </li>
               <li><a>Support</a></li>
-              <li><a>Login</a></li>
+              <li><a onClick={toggleModal}>Login</a></li>
             </ul>
           </div>
         </div>
@@ -48,7 +57,6 @@ const Navbar = () => {
         <a className="text-xl font-bold w-[136px] h-[33px] lg:order-none order-1" href="/">
           <img src="https://i.ibb.co/w4Zrp1K/Logo.png" alt="logo" />
         </a>
-        {/* <a className="text-xl font-bold lg:order-none order-1">Cource</a> */}
 
         {/* Desktop Menu */}
         <div className="hidden lg:flex items-center gap-5">
@@ -63,7 +71,7 @@ const Navbar = () => {
               </details>
             </li>
             <li><a>Support</a></li>
-            <li><a>Login</a></li>
+            <li><a onClick={toggleModal}>Login</a></li>
           </ul>
 
           <button className="px-4 py-1 btn button_colour flex items-center gap-2">
@@ -72,6 +80,11 @@ const Navbar = () => {
           </button>
         </div>
       </div>
+
+      {/* Login Modal */}
+      {isModalOpen && (
+        <LoginModal onClose={toggleModal} />
+      )}
     </div>
   );
 };
