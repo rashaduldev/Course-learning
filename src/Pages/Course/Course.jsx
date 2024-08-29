@@ -47,9 +47,9 @@ const Course = () => {
                     courses.slice(0, visibleCourses).map((course) => (
                         <div key={course.id}
                         onClick={() => handleCardClick(course.id)}
-                        className="card card-compact bg-base-100 shadow my-10 cursor-pointer">
+                        className="rounded-[8px] bg-base-100 shadow my-10 cursor-pointer">
                             <figure>
-                                <img src={course.img} alt={course.title} className="h-48 w-full object-cover" />
+                                <img src={course.img} alt={course.title} className="h-48 w-full object-cover rounded-t-[8px]" />
                             </figure>
                             <div className="card-body">
                                 <h2 className="card-title">{course.title}</h2>

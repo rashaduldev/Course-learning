@@ -10,12 +10,6 @@ const LoginModal = ({ onClose }) => {
         </svg></span></button>
 
         <div className="flex items-center font-[800] justify-center mb-10">
-        {/* <img
-          src="https://i.ibb.co/w4Zrp1K/Logo.png"
-          alt="logo"w-[74.705px] h-[46.515px]
-          className="mx-auto mb-10"
-          style={{ width: '74.705px' }}
-        /> */}
                 <svg xmlns="http://www.w3.org/2000/svg"  width="74" height="46" viewBox="0 0 75 47" fill="none">
                 <path d="M14.9935 46.5147L0.151367 0L30.3304 17.8903L74.8568 0L14.9935 46.5147Z" fill="#A9BF1C"/>
                 </svg>
@@ -24,31 +18,31 @@ const LoginModal = ({ onClose }) => {
         <h2 className="text-center text-[24px] font-[700] leading-[36px] mb-[53px]">User login</h2>
 
         <form>
-          <div className="mb-4">
-            <input
-              type="text"
-              placeholder="User Name/ Email"
-              className="w-full p-2 border border-[#CBE333] rounded"
-            />
-          </div>
-          <div className="mb-4">
-            <input
-              type="password"
-              placeholder="Password*"
-              className="w-full p-2 border border-gray-300 rounded"
-            />
-          </div>
-          <div className="flex items-center justify-between mb-4">
-            <a href="#" className="text-sm text-gray-500">Forgot password?</a>
-            <div className="flex items-center">
-              <input type="checkbox" id="remember" className="mr-2" />
-              <label htmlFor="remember" className="text-sm text-gray-500">Remember me</label>
+            <div className="mb-4">
+                <input
+                type="text"
+                placeholder="User Name/ Email"
+                className="w-full p-2 border border-[#637381] rounded focus:border-[#C8E031] focus:outline-none focus:ring-2 focus:ring-[#C8E031]"
+                />
             </div>
-          </div>
-          <button type="submit" className="w-full p-2 bg-[#CBE333] rounded text-black">
-            Login
-          </button>
-        </form>
+            <div className="mb-4">
+                <input
+                type="password"
+                placeholder="Password*"
+                className="w-full p-2 border border-[#637381] rounded focus:border-[#C8E031] focus:outline-none focus:ring-2 focus:ring-[#C8E031]"
+                />
+            </div>
+            <div className="flex items-center justify-between mb-4">
+                <a href="#" className="text-sm text-gray-500">Forgot password?</a>
+                <div className="flex items-center">
+                <input type="checkbox" id="remember" className="mr-2" />
+                <label htmlFor="remember" className="text-sm text-gray-500">Remember me</label>
+                </div>
+            </div>
+            <button type="submit" className="w-full p-2 bg-[#CBE333] rounded text-black">
+                Login
+            </button>
+            </form>
       </div>
     </div>
   );

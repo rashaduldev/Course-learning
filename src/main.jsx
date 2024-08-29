@@ -9,6 +9,7 @@ import Root from './Root/Root';
 import HomePage from './Pages/HomePage/HomePage';
 import AllCourses from './Pages/Course/Allcource/Allcource';
 import Courcedetails from './Pages/Course/Allcource/Courcedetails';
+import Billing from './Pages/Billing/Billing';
 
 const router = createBrowserRouter([
   {
@@ -18,6 +19,10 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <HomePage />,
+      },
+      {
+        path: "/billing",
+        element: <Billing />,
       },
       {
         path: "/all-courses",

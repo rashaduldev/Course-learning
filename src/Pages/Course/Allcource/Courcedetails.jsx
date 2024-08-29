@@ -109,6 +109,18 @@ const sections = [
       comment:
         'Webflow course was good, it coves design secrets, and to build responsive web pages, blog, and some more tricks and tips about webflow. I enjoyed the course and it helped me to add web development skills related to webflow in my toolbox. Thank you Vako.',
     },
+    {
+        name: 'Guy Hawkins',
+        time: '1 week ago',
+        comment:
+          'I appreciate the precise short videos (10 mins or less each) because overly long videos tend to make me lose focus. The instructor is very knowledgeable in Web Design and it shows as he shares his knowledge. These were my best 6 months of training. Thanks, Vako.',
+      },
+      {
+        name: 'Guy Hawkins',
+        time: '1 week ago',
+        comment:
+          'I appreciate the precise short videos (10 mins or less each) because overly long videos tend to make me lose focus. The instructor is very knowledgeable in Web Design and it shows as he shares his knowledge. These were my best 6 months of training. Thanks, Vako.',
+      },
   ];
 
 const Courcedetails = () => {
@@ -164,7 +176,7 @@ const Courcedetails = () => {
                                     <div className="flex flex-col md:flex-row lg:flex-row justify-between items-center lg:space-x-3 mb-4 mx-6 lg:mx-0">
                                     <div className='flex items-center gap-3 my-5 '>
                                     <img
-                                            src="https://via.placeholder.com/40"
+                                            src="https://s3-alpha-sig.figma.com/img/32e7/916e/635c8c33836a52c91189cb021d6e4422?Expires=1725840000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=hv41itBonZSXojhJ5CqmBblC2yJVRI1u6ISn16-YMC2b1r8cqP~R~ANaEfoNIS-a7~hTh7tt0SdxBJMCuT7Z4N7ZO5xG53ldfA8Y6xT1JV~eIIr1V2y3f4CG3~EHCHHuPoHjFmvbpJ1rEHm3H7Nb9ITgjl2ArcIrYOgDjGyyMicZ2LWcNEg63rm4kKzArE3V8JWaVilouudwtFVsNvkrMnUWJG63zcqD1qy9Quv2UGl~-uoGnjdRT0r2RMtQ9~6CqwRB7Up07-Gq9gV1ctvqpaBM6xOSMCLxCwCNXFSsKlKjTl6q3uK1FW7XbGyL7Jzxcsog0MVBz3NWiH4LUE~Qzg__"
                                             alt="Creator"
                                             className="w-10 h-10 rounded-full"
                                         />
@@ -367,45 +379,66 @@ const Courcedetails = () => {
                             </div>
                         </div>
                         {/* Rating */}
-                        <div className="mx-auto p-6 bg-white rounded-lg border">
-                        <div className="flex items-center">
+                        <div>
+                        <h1 className="text-[24px] font-[700] leading-[36px]">Course Rating</h1>
+                        <div className="mx-auto px-6 mt-5 bg-white flex flex-col md:flex-row items-center gap-6">
+                            <div className="flex flex-col items-center border w-full md:w-[176px] py-[31px]">
                             <div className="text-4xl font-bold">4.8</div>
-                            <div className="ml-4 text-yellow-500 flex">
-                            <FaStar size={28} />
-                            <FaStar size={28} />
-                            <FaStar size={28} />
-                            <FaStar size={28} />
-                            <FaStar size={28} />
+                            <div className="mt-6 text-yellow-500 flex">
+                                <FaStar size={20} />
+                                <FaStar size={20} />
+                                <FaStar size={20} />
+                                <FaStar size={20} />
+                                <FaStar size={20} />
                             </div>
+                            <div className="mt-3">Course Rating</div>
+                            </div>
+
+                            <div className="mt-4 w-full">
+                            {ratings
+                                .sort((a, b) => b.stars - a.stars) // Sort ratings in descending order by stars
+                                .map((rating) => (
+                                <div key={rating.stars} className="flex flex-col md:flex-row items-center mb-4">
+                                    <div className="text-gray-700 flex items-center">
+                                    {[...Array(rating.stars)].map((_, index) => (
+                                        <FaStar key={index} size={20} className="text-yellow-500" />
+                                    ))}
+                                    {[...Array(5 - rating.stars)].map((_, index) => (
+                                        <FaStar key={index} size={20} className="text-gray-300" />
+                                    ))}
+                                    <span className="ml-2 Secondery_Text_Colour">{rating.stars} star Rating</span>
+                                    </div>
+                                    <div className="w-[60%] ml-3 bg-gray-200 rounded-full h-2.5 md:ml-4 mt-2 md:mt-0">
+                                    <div
+                                        className="bg-yellow-500 h-2.5 rounded-full"
+                                        style={{ width: `${rating.percentage}%` }}
+                                    />
+                                    </div>
+                                    <div className="ml-0 md:ml-4 text-gray-600 mt-2 md:mt-0">
+                                    {rating.percentage}
+                                    {rating.percentage === '<1' ? '' : '%'}
+                                    </div>
+                                </div>
+                                ))}
+                            </div>
+                        </div>
                         </div>
 
-                        <div className="mt-4">
-                            {ratings.map((rating) => (
-                            <div key={rating.stars} className="flex items-center">
-                                <div className="text-gray-700 flex">
-                                {[...Array(rating.stars)].map((_, index) => (
-                                    <FaStar key={index} size={20} className="text-yellow-500" />
-                                ))}
-                                {[...Array(5 - rating.stars)].map((_, index) => (
-                                    <FaStar key={index} size={20} className="text-gray-300" />
-                                ))}
+                             <div className='mt-10'>
+                                <div className='flex items-center justify-between'>
+                                    <h3 className="text-[18px] lg:text-[24px] font-[700] leading-[36px]">Students Feedback</h3>
+                                    <select className='border py-3 px-4' name="" id="">
+                                        <option value="">5 Star Rating</option>
+                                        <option value="">4 Star Rating</option>
+                                        <option value="">3 Star Rating</option>
+                                        <option value="">2 Star Rating</option>
+                                        <option value="">1 Star Rating</option>
+                                    </select>
                                 </div>
-                                <div className="w-full bg-gray-200 rounded-full h-2.5 ml-4">
-                                <div
-                                    className="bg-yellow-500 h-2.5 rounded-full"
-                                    style={{ width: `${rating.percentage}%` }}
-                                ></div>
-                                </div>
-                                <div className="ml-4 text-gray-600">
-                                {rating.percentage}
-                                {rating.percentage === '<1' ? '' : '%'}
-                                </div>
-                            </div>
-                            ))}
-                        </div>
+                        <div className="mx-auto p-6 bg-white">
+                       
                                 {/* Students Feedback */}
                         <div className="mt-8">
-                            <h3 className="text-xl font-bold mb-4">Students Feedback</h3>
                             {reviews.map((review, index) => (
                             <div key={index} className="mb-6">
                                 <div className="flex items-center">
@@ -415,15 +448,22 @@ const Courcedetails = () => {
                                     className="w-10 h-10 rounded-full mr-4"
                                 />
                                 <div>
+                                   <div className='flex items-center gap-3'>
                                     <h4 className="font-semibold">{review.name}</h4>
+                                    <div className='text-[12px] Secondery_Text_Colour'>.</div>
                                     <div className="text-sm text-gray-500">{review.time}</div>
+                                   </div>
                                 </div>
                                 </div>
-                                <div className="mt-2 text-gray-700">{review.comment}</div>
+                                <div className="mt-2 Secondery_Text_Colour text-[14px] font-[400] leading-[22px]">{review.comment}</div>
+                                <hr className='mt-5' />
                             </div>
+                            
                             ))}
+                           
                         </div>
                         </div>
+                             </div>
                         
                         </div>
 
@@ -432,24 +472,24 @@ const Courcedetails = () => {
                 <div className='lg:w-[30%]'>   
                 <div className="border border-gray-200 rounded-md p-4 font-sans">
                     {/* Course Info */}
-                    <div className="mb-8">
-                        <div className="flex justify-between mb-2 text-sm">
+                    <div className="my-6">
+                        <div className="flex justify-between mb-5 text-sm">
                         <span>📅 Course Duration</span>
                         <span>6 Months</span>
                         </div>
-                        <div className="flex justify-between mb-2 text-sm">
+                        <div className="flex justify-between mb-5 text-sm">
                         <span>📊 Course Level</span>
                         <span>Beginner and Intermediate</span>
                         </div>
-                        <div className="flex justify-between mb-2 text-sm">
+                        <div className="flex justify-between mb-5 text-sm">
                         <span>👥 Students Enrolled</span>
                         <span>69,419,618</span>
                         </div>
-                        <div className="flex justify-between mb-2 text-sm">
+                        <div className="flex justify-between mb-5 text-sm">
                         <span>🗣️ Language</span>
                         <span>Mandarin</span>
                         </div>
-                        <div className="flex justify-between mb-2 text-sm">
+                        <div className="flex justify-between mb-5 text-sm">
                         <span>📜 Subtitle Language</span>
                         <span>English</span>
                         </div>
@@ -466,7 +506,7 @@ const Courcedetails = () => {
                     {/* Course Includes */}
                     <div className="mb-4 mt-5">
                         <h3 className="text-base mb-2">This course includes:</h3>
-                        <ul className="list-none p-0 space-y-2 text-sm">
+                        <ul className="list-none p-0 space-y-5 text-sm">
                         <li>⏳ Lifetime access</li>
                         <li>💸 30-days money-back guarantee</li>
                         <li>📄 Free exercises file & downloadable resources</li>

@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { HiOutlinePlusSmall } from "react-icons/hi2";
 import LoginModal from "../Pages/LoginModal/LoginModal";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -74,10 +75,12 @@ const Navbar = () => {
             <li><a onClick={toggleModal}>Login</a></li>
           </ul>
 
-          <button className="px-4 py-1 btn button_colour flex items-center gap-2">
+        <Link to={'/billing'}>
+        <button className="px-4 py-1 btn button_colour flex items-center gap-2">
             <HiOutlinePlusSmall className="" />
             <p className="">Join Now</p>
           </button>
+        </Link>
         </div>
       </div>
 
