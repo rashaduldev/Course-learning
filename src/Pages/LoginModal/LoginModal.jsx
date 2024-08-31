@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 
 
 // eslint-disable-next-line react/prop-types
@@ -39,9 +40,11 @@ const LoginModal = ({ onClose }) => {
                 <label htmlFor="remember" className="text-sm text-gray-500">Remember me</label>
                 </div>
             </div>
-            <button type="submit" className="w-full p-2 bg-[#CBE333] rounded text-black">
-                Login
-            </button>
+           <Link to={'/dashboard'}>
+              <button type="submit" className="w-full p-2 bg-[#CBE333] rounded text-black">
+                    Login
+                </button>
+            </Link>
             </form>
       </div>
     </div>

@@ -1,6 +1,6 @@
 /* eslint-disable react/no-unescaped-entities */
 // CourseDetail.js
-import { useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import { GrFacebookOption } from 'react-icons/gr';
 import { FaTwitter } from 'react-icons/fa';
@@ -497,10 +497,12 @@ const Courcedetails = () => {
                     <hr />
 
                     {/* Start Course Button */}
+                   <Link to={'/billing'}>
                     <button className="w-full py-2 mb-4 mt-4 btn button_colour rounded-md">
-                    <HiOutlinePlusSmall />
-                     Start Course
-                    </button>
+                        <HiOutlinePlusSmall />
+                        Start Course
+                        </button>
+                   </Link>
                     <hr />
 
                     {/* Course Includes */}
