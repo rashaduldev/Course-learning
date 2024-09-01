@@ -36,7 +36,7 @@ const Billing = () => {
 
       {/* Billing Summary */}
       <div className="md:w-1/2 w-full ml-[124px]">
-        <div className="bg-white p-6 shadow-md rounded-lg">
+        <div className="bg-white p-6 rounded-lg">
           <h3 className="text-[32px] font-[700] leading-[48px] mb-[35px]">Billing Summary</h3>
           <div className="mb-4">
             <div className="flex justify-between">
@@ -79,16 +79,18 @@ const Billing = () => {
     </div>
     {/*  */}
        <div className="flex justify-end mb-20 ml-[124px]    ">
-            <div className="mt-6 bg-white p-6 shadow-md w-[50%] rounded-lg">
-            <h3 className="text-xl font-semibold mb-4">Payment Method</h3>
-            <div className="flex items-center mb-4">
-                <input type="radio" id="sslcommerz" name="payment" className="mr-2" />
-                <label htmlFor="sslcommerz">SSLCommerz</label>
-            </div>
-            <div className="flex items-center mb-4">
-                <input type="radio" id="debit" name="payment" className="mr-2" />
-                <label htmlFor="debit">Debit Card</label>
-            </div>
+            <div className="mt-6 bg-white p-6 border w-[46%] mr-5 rounded-lg">
+            <h3 className="text-[32px] font-[700] leading-[48px] mb-4">Payment Method</h3>
+           <div className="flex items-center gap-[35px]">
+              <div className="flex items-center mb-4">
+                    <input type="radio" id="sslcommerz" name="payment" className="mr-2" />
+                    <img className="W-[89.85PX] h-[40px]" src="https://inews.zoombangla.com/wp-content/uploads/2024/03/Bkash.jpg" alt="" />
+                </div>
+                <div className="flex items-center mb-4">
+                    <input type="radio" id="debit" name="payment" className="mr-2" />
+                    <label htmlFor="debit">Debit Card</label>
+                </div>
+           </div>
             <button className="w-full button_colour py-3 rounded-md font-semibold">
                 Proceed Payment (5,850 BDT)
             </button>

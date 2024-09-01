@@ -12,6 +12,8 @@ import Courcedetails from './Pages/Course/Allcource/Courcedetails';
 import Billing from './Pages/Billing/Billing';
 import Dashboard from './Dashboard/Dashboard';
 import DashboardRoot from './Root/DashboardRoot';
+import Courses from './Dashboard/Courses';
+import Setting from './Dashboard/Setting';
 
 const router = createBrowserRouter([
   {
@@ -23,28 +25,35 @@ const router = createBrowserRouter([
         element: <HomePage />,
       },
       {
-        path: "/billing",
+        path: "billing",
         element: <Billing />,
       },
       {
-        path: "/all-courses",
+        path: "all-courses",
         element: <AllCourses />,
       },
       {
-        path: "/course/:courseId",
+        path: "course/:courseId",
         element: <Courcedetails />,
       }
     ]
-     
   },
   {
     path: "/dashboard",
-    element: <DashboardRoot/>,
-    children:[
+    element: <DashboardRoot />,
+    children: [
       {
-        path: "/dashboard",
-        element: <Dashboard/>,
-      }
+        path: "/dashboard", 
+        element: <Dashboard />,
+      },
+      {
+        path: "/dashboard/courses", 
+        element: <Courses />,
+      },
+      {
+        path: "/dashboard/settings", 
+        element: <Setting />,
+      },
     ]
   }
 ]);
