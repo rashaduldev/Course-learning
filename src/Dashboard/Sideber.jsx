@@ -25,7 +25,7 @@ const Sidebar = () => {
               `flex items-center text-[16px] leading-[24px] p-2 font-[400] w-full pl-10 transition-colors duration-200 py-5 ${
                 isActive
                   ? "bg-[#EAEEE1] text-black border-r-2 border-[#B6CD26]"
-                  : "hover:bg-[#EAEEE1] text-gray-600"
+                  : "hover:bg-[#EAEEE1] text-gray-600"  
               }`
             }
           >

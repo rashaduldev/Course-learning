@@ -1,12 +1,12 @@
 import { useState, useEffect } from "react";
 import { CiSearch } from "react-icons/ci";
+import { NavLink } from "react-router-dom";
 
 const Dashboard = () => {
   const [courses, setCourses] = useState([]); 
-  const [showAll, setShowAll] = useState(false); 
+  const [showAll, setShowAll] = useState(false);
 
   useEffect(() => {
-    // Fetch data when the component mounts
     const fetchCourses = async () => {
       try {
         const response = await fetch("courcedata.json");
@@ -24,7 +24,7 @@ const Dashboard = () => {
   }, []);
 
   return (
-    <div   className="">
+    <div className="">
       {/* Main Content */}
       <main className="">
         <div className="flex flex-col lg:flex-row items-center justify-between">
@@ -65,19 +65,22 @@ const Dashboard = () => {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-5 h-auto">
             {(showAll ? courses : courses.slice(0, 6)).map((course, index) => (
-              <div key={index} className="bg-[#F9FAFB] border border-[#E0E4E8] rounded-lg flex gap-[20px] h-auto p-5">
+             <NavLink to={'/dashboard/courses'}  key={index}>
+               <div
+               
+                className="bg-[#F9FAFB] border border-[#E0E4E8] rounded-lg flex gap-[20px] h-auto p-5 cursor-pointer"
+              >
                 <img src={course.img} alt={course.title} className="w-[177.63px] h-[100px] rounded-md" />
                 <div className="">
-                
                   <button className="text-[12px] w-[400] leading-[18px] bg-[#DFE3E8] rounded py-1 px-2">{course.title}</button>
                   <h1 className="mt-3 mb-2 text-[16px] w-[600] leading-[24px] text-[#3D3D3D]">{course.category}</h1>
                   <div className="flex items-center gap-5 Secondery_Text_Colour">
                     <p className="text-sm">{course.mentor}</p>
                     <p>{course.time}</p>
                   </div>
-                  
                 </div>
               </div>
+             </NavLink>
             ))}
           </div>
         </div>
