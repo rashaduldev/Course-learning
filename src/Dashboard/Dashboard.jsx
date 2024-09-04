@@ -65,7 +65,7 @@ const Dashboard = () => {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-5 h-auto">
             {(showAll ? courses : courses.slice(0, 6)).map((course, index) => (
-             <NavLink to={'/dashboard/courses'}  key={index}>
+             <NavLink to={`/dashboard/courses/${course.id}`}  key={index}>
                <div
                
                 className="bg-[#F9FAFB] border border-[#E0E4E8] rounded-lg flex gap-[20px] h-auto p-5 cursor-pointer"

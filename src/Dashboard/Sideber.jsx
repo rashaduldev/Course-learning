@@ -1,6 +1,6 @@
-import { BsBell } from "react-icons/bs";
 import { CiSearch, CiSettings } from "react-icons/ci";
 import { GrHomeRounded } from "react-icons/gr";
+import { IoIosLogOut } from "react-icons/io";
 import { PiBookOpenTextThin } from "react-icons/pi";
 import { RiSlideshowView } from "react-icons/ri";
 import { NavLink } from "react-router-dom";
@@ -12,10 +12,10 @@ const Sidebar = () => {
         {[
           { to: "/dashboard", icon: <GrHomeRounded />, label: "Dashboard" },
           { to: "/dashboard/courses", icon: <PiBookOpenTextThin />, label: "Courses" },
-          { to: "/dashboard/slides", icon: <RiSlideshowView />, label: "Slides" },
-          { to: "/dashboard/search", icon: <CiSearch />, label: "Search" },
-          { to: "/dashboard/reminders", icon: <BsBell />, label: "Reminders" },
+          { to: "/dashboard/mylevel", icon: <RiSlideshowView />, label: "My Level" },
+          { to: "/dashboard/profile", icon: <CiSearch />, label: "Profile" },
           { to: "/dashboard/settings", icon: <CiSettings />, label: "Settings" },
+          { to: "/logout", icon: <IoIosLogOut />, label: "Log Out" },
         ].map((item, index) => (
           <NavLink
             key={index}

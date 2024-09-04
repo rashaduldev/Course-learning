@@ -14,6 +14,8 @@ import Dashboard from './Dashboard/Dashboard';
 import DashboardRoot from './Root/DashboardRoot';
 import Courses from './Dashboard/Courses';
 import Setting from './Dashboard/Setting';
+import CourseDetails from './Dashboard/CourseDetails';
+import DashProfile from './Dashboard/DashProfile';
 
 const router = createBrowserRouter([
   {
@@ -49,6 +51,14 @@ const router = createBrowserRouter([
       {
         path: "/dashboard/courses", 
         element: <Courses />,
+      },
+      {
+        path: "/dashboard/courses/:courseId",
+        element: <CourseDetails />,
+      }, 
+      {
+        path: "/dashboard/profile",
+        element: <DashProfile/>,
       },
       {
         path: "/dashboard/settings", 
