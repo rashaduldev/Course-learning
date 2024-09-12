@@ -16,11 +16,13 @@ import Courses from './Dashboard/Courses';
 import Setting from './Dashboard/Setting';
 import CourseDetails from './Dashboard/CourseDetails';
 import DashProfile from './Dashboard/DashProfile';
+import Errorpage from './Pages/Errorpage/Errorpage';
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Root />,
+    errorElement: <Errorpage/>,
     children: [
       {
         path: "/",
@@ -43,6 +45,7 @@ const router = createBrowserRouter([
   {
     path: "/dashboard",
     element: <DashboardRoot />,
+    errorElement: <div>Error: not found</div>,
     children: [
       {
         path: "/dashboard", 

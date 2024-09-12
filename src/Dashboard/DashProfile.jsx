@@ -3,7 +3,7 @@ const DashProfile = () => {
     <div className="">
       <div className="flex flex-col lg:flex-row">
         {/* Profile Picture Section */}
-       <div className="mr-20 rounded-[8px]">
+       <div className="lg:mr-20 rounded-[8px]">
        <h2 className="text-2xl font-semibold text-gray-800 mb-10">My Profile</h2> 
         <div className="p-7 border">
           <div className="relative w-[280px] h-[280px] overflow-hidden border-2 border-gray-200">
@@ -24,7 +24,7 @@ const DashProfile = () => {
        </div>
 
         {/* User Details Form */}
-        <div className="w-full">
+        <div className="w-full px-5 lg:px-0 mt-10 lg:mt-0">
           
           <form>
             <div className="grid grid-cols-1 gap-6">

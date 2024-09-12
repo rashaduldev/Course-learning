@@ -38,7 +38,7 @@ const Dashboard = () => {
         </div>
         
         {/* Overview Section */}
-        <div className="my-6">
+        <div className="my-6 mx-10 lg:mx-0">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-5 mb-6">
             <div className="lg:px-5 py-6 rounded-lg text-center lg:text-left bg-[#F4F6F8] space-y-6">
               <p className="primary_color text-[42px] leading-[42px] font-bold">06</p>
@@ -63,7 +63,7 @@ const Dashboard = () => {
               {showAll ? "Show Less" : "View All"}
             </button>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-5 h-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-5 mx-5 lg:mx-0 h-auto">
             {(showAll ? courses : courses.slice(0, 6)).map((course, index) => (
              <NavLink to={`/dashboard/courses/${course.id}`}  key={index}>
                <div

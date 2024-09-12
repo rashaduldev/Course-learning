@@ -43,8 +43,9 @@ const Navbar = () => {
                 <details>
                   <summary>Products</summary>
                   <ul className="p-2">
-                    <li><a>product 1</a></li>
-                    <li><a>product 2</a></li>
+                    <li><a>Learning Management</a></li>
+                    <li><a>Sustainable Report</a></li>
+                    <li><a>Others</a></li>
                   </ul>
                 </details>
               </li>
@@ -65,9 +66,10 @@ const Navbar = () => {
             <li>
               <details>
                 <summary>Products</summary>
-                <ul className="p-2">
-                  <li><a>product 1</a></li>
-                  <li><a>product 2</a></li>
+                <ul className="p-2 w-52">
+                <li><a>Learning Management</a></li>
+                    <li><a>Sustainable Report</a></li>
+                    <li><a>Others</a></li>
                 </ul>
               </details>
             </li>

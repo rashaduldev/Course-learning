@@ -4,7 +4,7 @@ This project is a minimal setup of a course learning platform using React and Vi
 
 ## Live Demo
 
-Check out the live version of this project [here](https://course-learning-rashadul.vercel.app).
+Check out the live version of this project [here](https://learning.tripleibd.com).
 
 ## Project Setup
 
