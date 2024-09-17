@@ -17,7 +17,7 @@ const DashProfile = () => {
               Upload Photo
             </label>
           </div>
-          <p className="text-gray-500 mt-4 text-sm text-center">
+          <p className="text-gray-500 mt-4 text-sm text-center">  
             Image size should be under 1MB and image ratio needs to be 1:1
           </p>
         </div>

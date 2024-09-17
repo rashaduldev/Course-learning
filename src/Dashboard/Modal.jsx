@@ -106,6 +106,9 @@ const Modal = ({ isOpen, toggleModal }) => {
               </ul>
             </div>
           ))}
+          <div className="flex justify-end">
+          <button className="button_colour rounded" type="submit">Submit</button>
+          </div>
         </div>
       </div>
     </div>

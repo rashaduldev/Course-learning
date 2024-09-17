@@ -17,6 +17,9 @@ import Setting from './Dashboard/Setting';
 import CourseDetails from './Dashboard/CourseDetails';
 import DashProfile from './Dashboard/DashProfile';
 import Errorpage from './Pages/Errorpage/Errorpage';
+import Support from './Pages/Support/Support';
+import GetReport from './Pages/GetReport/GetReport';
+import Mylevel from './Dashboard/Mylevel';
 
 const router = createBrowserRouter([
   {
@@ -39,7 +42,15 @@ const router = createBrowserRouter([
       {
         path: "course/:courseId",
         element: <Courcedetails />,
-      }
+      },
+      {
+        path: "support",
+        element: <Support/>,
+      },
+      {
+        path: "get-report",
+        element: <GetReport/>,
+      },
     ]
   },
   {
@@ -60,6 +71,10 @@ const router = createBrowserRouter([
         element: <CourseDetails />,
       }, 
       {
+        path: "/dashboard/my-level",
+        element: <Mylevel />,
+      },
+      {
         path: "/dashboard/profile",
         element: <DashProfile/>,
       },
@@ -73,6 +88,6 @@ const router = createBrowserRouter([
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <RouterProvider router={router} />
+     <RouterProvider router={router} />
   </StrictMode>,
 );

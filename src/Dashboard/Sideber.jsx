@@ -12,10 +12,10 @@ const Sidebar = () => {
         {[
           { to: "/dashboard", icon: <GrHomeRounded />, label: "Dashboard" },
           { to: "/dashboard/courses", icon: <PiBookOpenTextThin />, label: "Courses" },
-          { to: "/dashboard/mylevel", icon: <RiSlideshowView />, label: "My Level" },
+          { to: "/dashboard/my-level", icon: <RiSlideshowView />, label: "My Level" },
           { to: "/dashboard/profile", icon: <CiSearch />, label: "Profile" },
           { to: "/dashboard/settings", icon: <CiSettings />, label: "Settings" },
-          { to: "/logout", icon: <IoIosLogOut />, label: "Log Out" },
+          { to: "/login", icon: <IoIosLogOut />, label: "Log Out" },
         ].map((item, index) => (
           <NavLink
             key={index}
